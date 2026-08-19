@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: forecast
+    runtime: static
+    staticPublishPath: .
+    # The app is a single design-canvas page; serve it at the site root.
+    routes:
+      - type: rewrite
+        source: /
+        destination: /Forecast.dc.html
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
