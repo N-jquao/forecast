@@ -13,6 +13,21 @@ with city search and reverse geocoding. No API keys, no server, no build step.
 | `_ds/` | The "Organic" design system: tokens, stylesheet, component guide |
 | `render.yaml` | Render static-site blueprint |
 
+## Responsive layout
+
+One page, four breakpoints. The artboard's inline styles are the desktop baseline; a media-query
+layer in `Forecast.dc.html` overrides them from there down.
+
+| Width | What changes |
+| --- | --- |
+| ≤ 1080px | Tighter page padding, smaller hero temperature (large tablets, small laptops) |
+| ≤ 900px | Grid collapses to a single column; search bar stretches to fill the header |
+| ≤ 640px | Phone scale: 2-up stat tiles, shorter charts, condensed 7-day rows, safe-area padding, 16px search field so iOS does not zoom on focus |
+| ≤ 380px | Small phones (iPhone SE, Galaxy S) — tighter day rows and hour tiles |
+
+Landscape phones get a shorter top/bottom padding rule. Hour strips scroll horizontally with
+snap points; verified from 320px to 1024px with no horizontal page overflow.
+
 ## Run locally
 
 ```sh
