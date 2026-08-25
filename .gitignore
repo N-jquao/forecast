@@ -1,1 +1,15 @@
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Design-canvas editor artifacts (local only — not needed to run or deploy)
+.thumbnail
+_ds/*/_adherence.oxlintrc.json
+_ds/*/_ds_manifest.json
